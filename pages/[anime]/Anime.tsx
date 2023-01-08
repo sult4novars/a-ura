@@ -24,12 +24,12 @@ export const Anime = () => {
       <StyledImageBG>
         <Container fluid gap={0}>
           <Grid.Container gap={1} direction='column' justify='flex-start'>
-            <Grid xs={6} sm={12} md={12}>
+            <Grid xs={12} sm={12} md={12}>
               <Text h1>Гинтама / Gintama</Text>
               {/* TODO: id */}
               {anime}
             </Grid>
-            <Grid xs={6} sm={12} md={9}>
+            <Grid xs={12} sm={12} md={9}>
               <Text>
                 Замки, самураи, культура и красивые девушки, теперь это все отошло на второй план,
                 после того, как пришельцы Аманто захватили землю. Правительство сдалось, ведь
@@ -49,7 +49,7 @@ export const Anime = () => {
                 глупостей зрителям обеспечено.
               </Text>
             </Grid>
-            <Grid xs={6} sm={12} md={9}>
+            <Grid xs={12} sm={12} md={9}>
               <Button>Смотреть</Button>
             </Grid>
           </Grid.Container>
