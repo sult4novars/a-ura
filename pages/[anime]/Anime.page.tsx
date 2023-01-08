@@ -2,7 +2,7 @@ import { Text, Container, Grid, Button } from '@nextui-org/react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-import { StyledImageBG } from 'components/Anime.styled'
+import { StyledImageBG } from 'pages/[anime]/Anime.styled'
 
 const data = {
   src: 'https://m.media-amazon.com/images/I/712sDu2sccL._AC_SL1500_.jpg',
