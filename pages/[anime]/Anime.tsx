@@ -12,7 +12,7 @@ const data = {
   о своих родных.`,
 }
 
-const Anime = () => {
+export const Anime = () => {
   const router = useRouter()
   const { anime } = router.query
 
@@ -22,8 +22,8 @@ const Anime = () => {
         <title>Anime-ura (A-URA): {data.title}</title>
       </Head>
       <StyledImageBG>
-        <Container fluid gap={0} css={{ marginTop: '$10' }}>
-          <Grid.Container gap={2} direction='column' justify='flex-start'>
+        <Container fluid gap={0}>
+          <Grid.Container gap={1} direction='column' justify='flex-start'>
             <Grid xs={6} sm={12} md={12}>
               <Text h1>Гинтама / Gintama</Text>
               {/* TODO: id */}
@@ -58,5 +58,3 @@ const Anime = () => {
     </>
   )
 }
-
-export default Anime
