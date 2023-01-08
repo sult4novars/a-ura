@@ -2,7 +2,7 @@ import { Text, Container, Grid, Button } from '@nextui-org/react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-import { StyledImageBG } from './Anime.styled'
+import { StyledImageBG } from 'components/Anime.styled'
 
 const data = {
   src: 'https://m.media-amazon.com/images/I/712sDu2sccL._AC_SL1500_.jpg',
@@ -12,7 +12,7 @@ const data = {
   о своих родных.`,
 }
 
-export const Anime = () => {
+const Anime = () => {
   const router = useRouter()
   const { anime } = router.query
 
@@ -58,3 +58,5 @@ export const Anime = () => {
     </>
   )
 }
+
+export default Anime
