@@ -10,7 +10,13 @@ export const Header = () => {
   const { isDark } = useTheme()
 
   return (
-    <Navbar isBordered variant='sticky' as='header' maxWidth='fluid'>
+    <Navbar
+      isBordered
+      variant='sticky'
+      as='header'
+      maxWidth='fluid'
+      containerCss={{ padding: '0 $10' }}
+    >
       <Navbar.Content>
         <Navbar.Link color='inherit' href='/' as={Link}>
           <Navbar.Brand>
