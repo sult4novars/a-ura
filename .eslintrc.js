@@ -38,5 +38,6 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'error', // https://typescript-eslint.io/rules/no-unused-vars
     // #endregion no-unused-vars
     '@typescript-eslint/no-var-requires': 'off',
+    quotes: ['error', 'single', { allowTemplateLiterals: false }],
   },
 }
