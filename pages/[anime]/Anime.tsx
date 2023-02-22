@@ -1,5 +1,6 @@
 import { Text, Card, Grid, Button, Spacer } from '@nextui-org/react'
-import Head from 'next/head'
+
+import { PageWrap } from 'components'
 // import { useRouter } from 'next/router'
 
 const data = {
@@ -29,10 +30,7 @@ export const Anime = () => {
   // const { anime } = router.query
 
   return (
-    <>
-      <Head>
-        <title>Anime-ura (A-URA): {data.title}</title>
-      </Head>
+    <PageWrap textAfterTitleColon={data.title}>
       <Grid.Container gap={4} justify='flex-start' direction='row'>
         <Grid xs={12} sm={12} md={4} direction='column'>
           <Card variant='flat'>
@@ -52,6 +50,6 @@ export const Anime = () => {
           <Button css={{ width: '200px' }}>Смотреть</Button>
         </Grid>
       </Grid.Container>
-    </>
+    </PageWrap>
   )
 }
