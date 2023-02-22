@@ -1,26 +1,20 @@
 import { Grid } from '@nextui-org/react'
-import Head from 'next/head'
 import Link from 'next/link'
 
-import { Card } from 'components'
+import { Card, PageWrap } from 'components'
 
-const data = {
+const mockData = new Array(51).fill({
   src: 'https://m.media-amazon.com/images/I/712sDu2sccL._AC_SL1500_.jpg',
   alt: 'Card example background',
   title: 'Клинок рассекающий демонов',
   description: `Тандзиро Камадо — старший сын в семье, потерявший своего отца и взявший на себя заботу
   о своих родных.`,
-}
-
-const a = new Array(51).fill(data)
+})
 
 const Main = () => (
-  <>
-    <Head>
-      <title>Anime-ura (A-URA)</title>
-    </Head>
+  <PageWrap textAfterTitleColon='Главная'>
     <Grid.Container gap={4} justify='flex-start'>
-      {a.map((item, index) => (
+      {mockData.map((item, index) => (
         <Grid xs={12} sm={6} md={3} key={index}>
           <Link href={`/${index}`}>
             <Card {...item} />
@@ -28,7 +22,7 @@ const Main = () => (
         </Grid>
       ))}
     </Grid.Container>
-  </>
+  </PageWrap>
 )
 
 export default Main
