@@ -7,8 +7,10 @@ import { Input } from 'components/Input'
 
 import { schemaSignUp } from './schemaSignUp'
 
-const data = {
-  title: 'SignUp',
+export type SignUpFormType = {
+  login: string
+  password: string
+  cpassword: string
 }
 
 export const SignUp = () => {
@@ -18,7 +20,7 @@ export const SignUp = () => {
   return (
     <>
       <Head>
-        <title>Anime-ura (A-URA): {data.title}</title>
+        <title>Anime-ura (A-URA): {'sign-up'}</title>
       </Head>
       <Grid.Container
         css={{ height: 'calc(100vh - 76px)' }}
@@ -31,7 +33,7 @@ export const SignUp = () => {
             <Card.Header css={{ justifyContent: 'center' }}>
               <Text b>Вход</Text>
             </Card.Header>
-            <Grid.Container gap={3} css={{ width: '360px' }} justify='center' alignItems='center'>
+            <Grid.Container gap={3} css={{ width: '280px' }} justify='center' alignItems='center'>
               <FormProvider {...methods}>
                 <form onSubmit={methods.handleSubmit(onSubmit)}>
                   <Grid>
@@ -56,10 +58,4 @@ export const SignUp = () => {
       </Grid.Container>
     </>
   )
-}
-
-export type SignUpFormType = {
-  login: string
-  password: string
-  cpassword: string
 }

@@ -12,10 +12,6 @@ export type SignInFormType = {
   password: string
 }
 
-const data = {
-  title: 'SignIn',
-}
-
 export const SignIn = () => {
   const methods = useForm<SignInFormType>({ resolver: yupResolver(schemaSignIn) })
   const onSubmit = (data: any) => console.log(data)
@@ -23,7 +19,7 @@ export const SignIn = () => {
   return (
     <>
       <Head>
-        <title>Anime-ura (A-URA): {data.title}</title>
+        <title>Anime-ura (A-URA): {'sign-in'}</title>
       </Head>
       <Grid.Container
         css={{ height: 'calc(100vh - 76px)' }}
