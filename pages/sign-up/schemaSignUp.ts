@@ -7,5 +7,5 @@ const defaultStringSchema = string().min(1).max(100).defined()
 export const schemaSignUp: ObjectSchema<SignUpFormType> = object({
   login: defaultStringSchema,
   password: defaultStringSchema,
-  cpassword: defaultStringSchema.oneOf([ref('password')], 'Пароли должны совпадать'),
+  confirmPassword: defaultStringSchema.oneOf([ref('password')], 'Пароли должны совпадать'),
 })

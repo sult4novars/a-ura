@@ -3,7 +3,7 @@ import { useFormContext, type FieldValues, type Path } from 'react-hook-form'
 
 type InputProps<T extends FieldValues> = {
   name: Path<T>
-} & NextUiInputProps
+} & Partial<NextUiInputProps>
 
 export const Input = <T extends FieldValues>({ name, ...rest }: InputProps<T>) => {
   const { register, formState } = useFormContext()

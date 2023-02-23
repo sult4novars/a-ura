@@ -9,7 +9,7 @@ import { schemaSignUp } from './schemaSignUp'
 export type SignUpFormType = {
   login: string
   password: string
-  cpassword: string
+  confirmPassword: string
 }
 
 export const SignUp = () => {
@@ -28,7 +28,7 @@ export const SignUp = () => {
               <Input<SignUpFormType> name='password' placeholder='Пароль' bordered />
             </Grid>
             <Grid>
-              <Input<SignUpFormType> name='cpassword' placeholder='Пароль' bordered />
+              <Input<SignUpFormType> name='confirmPassword' placeholder='Пароль' bordered />
             </Grid>
             <Grid>
               <Button style={{ width: '100%' }} type='submit'>
