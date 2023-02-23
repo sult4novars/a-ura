@@ -18,7 +18,11 @@ export const SignUp = () => {
 
   return (
     <PageWrap textAfterTitleColon='Регистрация'>
-      <FormWrap title='Регистрация'>
+      <FormWrap
+        title='Регистрация'
+        footerText={'Есть аккаунт? Жми сюда'}
+        footerTextLink={'sign-in'}
+      >
         <FormProvider {...methods}>
           <form onSubmit={methods.handleSubmit(onSubmit)}>
             <Grid.Container gap={1}>

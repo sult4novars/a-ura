@@ -21,7 +21,7 @@ export const Header = () => {
         <Navbar.Link color='inherit' href='/' as={Link}>
           <Navbar.Brand>
             <Text
-              size={40}
+              size='$4xl'
               css={{
                 textGradient: '45deg, $blue600 -20%, $pink600 50%',
               }}
@@ -40,7 +40,7 @@ export const Header = () => {
           icon={isDark ? <SunIcon filled /> : <MoonIcon filled />}
           onClick={() => setTheme(isDark ? 'light' : 'dark')}
         />
-        <Navbar.Link color='inherit' href='#'>
+        <Navbar.Link color='inherit' href='sign-in'>
           Войти
         </Navbar.Link>
       </Navbar.Content>
