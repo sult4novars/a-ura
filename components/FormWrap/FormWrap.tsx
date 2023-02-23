@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from 'react'
 
-import { Grid, Card, Text } from '@nextui-org/react'
+import { Container, Card, Text } from '@nextui-org/react'
 
 type FormWrapProps = {
   title: string
@@ -9,21 +9,20 @@ type FormWrapProps = {
 
 export const FormWrap: FC<FormWrapProps> = ({ title, children }) => {
   return (
-    <Grid.Container
-      gap={2}
-      css={{ height: 'calc(100vh - 76px)' }}
+    <Container
+      style={{ height: 'calc(100vh - 76px)' }}
+      fluid
+      display='flex'
       justify='center'
       alignItems='center'
-      direction='row'
+      responsive={false}
     >
-      <Grid xs={12} justify='center' alignItems='center'>
-        <Card css={{ width: '420px' }}>
-          <Card.Header css={{ justifyContent: 'center' }}>
-            <Text b>{title}</Text>
-          </Card.Header>
-          <Card.Body>{children}</Card.Body>
-        </Card>
-      </Grid>
-    </Grid.Container>
+      <Card css={{ width: '420px' }}>
+        <Card.Header css={{ justifyContent: 'center' }}>
+          <Text b>{title}</Text>
+        </Card.Header>
+        <Card.Body>{children}</Card.Body>
+      </Card>
+    </Container>
   )
 }

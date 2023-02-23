@@ -13,23 +13,27 @@ export type SignInFormType = {
 
 export const SignIn = () => {
   const methods = useForm<SignInFormType>({ resolver: yupResolver(schemaSignIn) })
-  const onClick = (data: any) => console.log(data)
+  const onSubmit = (data: SignInFormType) => console.log(data)
 
   return (
     <PageWrap textAfterTitleColon='Вход'>
       <FormWrap title='Вход'>
         <FormProvider {...methods}>
-          <Grid>
-            <Input<SignInFormType> fullWidth name='login' placeholder='Логин' bordered />
-          </Grid>
-          <Grid>
-            <Input<SignInFormType> fullWidth name='password' placeholder='Пароль' bordered />
-          </Grid>
-          <Grid>
-            <Button style={{ width: '100%' }} type='submit' onClick={methods.handleSubmit(onClick)}>
-              Войти
-            </Button>
-          </Grid>
+          <form onSubmit={methods.handleSubmit(onSubmit)}>
+            <Grid.Container gap={1}>
+              <Grid xs={12}>
+                <Input<SignInFormType> fullWidth name='login' placeholder='Логин' bordered />
+              </Grid>
+              <Grid xs={12}>
+                <Input<SignInFormType> fullWidth name='password' placeholder='Пароль' bordered />
+              </Grid>
+              <Grid xs={12}>
+                <Button style={{ width: '100%' }} type='submit'>
+                  Войти
+                </Button>
+              </Grid>
+            </Grid.Container>
+          </form>
         </FormProvider>
       </FormWrap>
     </PageWrap>
