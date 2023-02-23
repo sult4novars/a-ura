@@ -19,13 +19,13 @@ export const SignIn = () => {
     <PageWrap textAfterTitleColon='Вход'>
       <FormWrap title='Вход'>
         <FormProvider {...methods}>
-          <Grid xs={12}>
+          <Grid>
             <Input<SignInFormType> fullWidth name='login' placeholder='Логин' bordered />
           </Grid>
-          <Grid xs={12}>
+          <Grid>
             <Input<SignInFormType> fullWidth name='password' placeholder='Пароль' bordered />
           </Grid>
-          <Grid xs={12}>
+          <Grid>
             <Button style={{ width: '100%' }} type='submit' onPress={methods.handleSubmit(onPress)}>
               Войти
             </Button>

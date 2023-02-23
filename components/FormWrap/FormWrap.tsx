@@ -10,6 +10,7 @@ type FormWrapProps = {
 export const FormWrap: FC<FormWrapProps> = ({ title, children }) => {
   return (
     <Grid.Container
+      gap={2}
       css={{ height: 'calc(100vh - 76px)' }}
       justify='center'
       alignItems='center'
