@@ -1,5 +1,4 @@
-import { styled } from '@nextui-org/react'
-import { Card as NextUiCard } from '@nextui-org/react'
+import { styled, Card as NextUiCard } from '@nextui-org/react'
 
 export const StyledCardDescriptionWrap = styled('div', {
   height: '0',

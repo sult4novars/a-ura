@@ -32,7 +32,7 @@ module.exports = {
     'import/no-useless-path-segments': 'error', // https://github.com/import-js/eslint-plugin-import/blob/c3d14cb920bdc6d277134973d37364db22c3a8b8/docs/rules/no-useless-path-segments.md
     'import/dynamic-import-chunkname': ['error', { importFunctions: ['dynamicImport'] }], // https://github.com/import-js/eslint-plugin-import/blob/v2.26.0/docs/rules/dynamic-import-chunkname.md
     // "no-duplicate-imports": "off",
-    // "import/no-duplicates": ["error"], // https://github.com/import-js/eslint-plugin-import/blob/c3d14cb920bdc6d277134973d37364db22c3a8b8/docs/rules/no-duplicates.md
+    'import/no-duplicates': ['error'], // https://github.com/import-js/eslint-plugin-import/blob/c3d14cb920bdc6d277134973d37364db22c3a8b8/docs/rules/no-duplicates.md
     'no-useless-constructor': 'off',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'error', // https://typescript-eslint.io/rules/no-unused-vars

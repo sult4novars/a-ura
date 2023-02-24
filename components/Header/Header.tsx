@@ -1,5 +1,4 @@
-import { useTheme } from '@nextui-org/react'
-import { Navbar, Button, Text } from '@nextui-org/react'
+import { useTheme, Navbar, Button, Text } from '@nextui-org/react'
 import { useTheme as useNextTheme } from 'next-themes'
 import Link from 'next/link'
 
