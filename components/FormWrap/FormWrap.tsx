@@ -5,12 +5,19 @@ import Link from 'next/link'
 
 type FormWrapProps = {
   title: string
+  linkTitle: string
   children: ReactNode
   footerText: string
   footerTextLink: string
 }
 
-export const FormWrap: FC<FormWrapProps> = ({ title, children, footerText, footerTextLink }) => {
+export const FormWrap: FC<FormWrapProps> = ({
+  title,
+  linkTitle,
+  children,
+  footerText,
+  footerTextLink,
+}) => {
   return (
     <Container
       style={{ height: 'calc(100vh - 76px)' }}
@@ -31,7 +38,7 @@ export const FormWrap: FC<FormWrapProps> = ({ title, children, footerText, foote
           <Text>
             {footerText} &nbsp;&nbsp;&nbsp;&nbsp; -&gt; &nbsp;&nbsp;&nbsp;&nbsp;
             <NextUiLink as={Link} href={footerTextLink}>
-              {title}
+              {linkTitle}
             </NextUiLink>
           </Text>
         </Card.Footer>

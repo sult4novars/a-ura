@@ -20,6 +20,7 @@ export const SignUp = () => {
     <PageWrap textAfterTitleColon='Регистрация'>
       <FormWrap
         title='Регистрация'
+        linkTitle='Вход'
         footerText={'Есть аккаунт? Жми сюда'}
         footerTextLink={'sign-in'}
       >
